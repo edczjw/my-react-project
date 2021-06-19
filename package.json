@@ -30,20 +30,18 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.{tsx,ts,js,jsx}": [
-      "prettier --write",
-      "eslint --fix --ignore-pattern **/*.d.ts"
+    "src/*.{js,jsx,mjs,ts,tsx}": [
+      "node_modules/.bin/prettier --write",
+      "node_modules/.bin/eslint --fix",
+      "git add"
     ],
-    "src/**/*.{scss,css}": [
-      "stylelint --fix"
-    ],
-    "src/**/*.{json,md}": [
-      "prettier --write"
+    "src/*.{css,scss,less,json,html,md,markdown}": [
+      "node_modules/.bin/prettier --write",
+      "git add"
     ]
   }
 }

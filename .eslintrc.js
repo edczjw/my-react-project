@@ -1,7 +1,7 @@
 module.exports = {
   parser: '"babel-eslint"', // 定义ESLint的解析器
   // 定义文件继承的子规范
-  extends: ['"plugin:prettier/recommended"'],
+  extends: ['"airbnb"','"plugin:prettier/recommended"'],
   plugins: ['"react"'], // 定义了ESLint 支持使用第三方插件
   // 为我们提供运行环境，一个环境定义了一组预定义的全局变量
   env: {
