@@ -8,6 +8,7 @@ const { Header, Footer, Sider, Content } = Layout;
 function Ahome (){
     return (
         <div className={style.Ahome_wrapper}>
+            kj
             <Sidemenu></Sidemenu>
         </div>
     )
