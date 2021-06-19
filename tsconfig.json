@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 指定ECMAScript目标版本 
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // 编译过程中需要引入的库文件的列表。
+    "allowJs": false,
+    "skipLibCheck": false, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "strict": true, // 启用所有严格类型检查选项。
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node", // 决定如何处理模块。
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "sourceMap": true, // 生成相应的 .map文件。
+    "baseUrl": "./", // 解析非相对模块名的基准目录
+    "paths": { // 模块名到基于 baseUrl的路径映射的列表。
+      "@/*": [
+      "src/*"
+      ]
+    }
+  },
+  "include": ["./src"]
+}
