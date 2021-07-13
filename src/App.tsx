@@ -1,15 +1,24 @@
-import React, { useState } from 'react' 
-import './App.css'
-import 'antd/dist/antd.css';
-import Login from './view/login'
-import Ahome from './view/Home'
+import React, { useState } from 'react';
+import { BrowserRouter as Router , Route, Switch } from "react-router-dom"; 
+import routes from '@/routes'
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">  
-      <Ahome></Ahome>
+    {/* 路由配置页面 */}
+      <Router>  
+          <Switch>
+            {
+              routes.map(route => 
+              <Route exact key={route.path} path={route.path}>
+                <route.component />
+              </Route>)
+            }
+          </Switch> 
+      </Router>
     </div>
   )
 }

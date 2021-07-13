@@ -1,0 +1,58 @@
+$default-color       : #1890ff;
+$default-scroll-color: #dbf3ed;
+$default-input-color : rgba(0, 0, 0, 0.35);
+
+body,
+html {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+// 覆写超链接样式
+a {
+  color: $default-color;
+
+  &:active,
+  &:hover {
+    color: $default-color;
+  }
+}
+
+// 覆写滚动条样式
+::-webkit-scrollbar {
+  width : 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius   : 4px;
+  background-color: $default-scroll-color;
+}
+
+// 覆写输入框样式
+input::-webkit-input-placeholder {
+  color  : $default-input-color !important;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color  : $default-input-color !important;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color  : $default-input-color !important;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color  : $default-input-color !important;
+  opacity: 1;
+}

@@ -1,12 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+import ReactDOM from 'react-dom'  
 import App from './App'
 
 // 入口页面
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App />   
   </React.StrictMode>,
   document.getElementById('root')
 )
