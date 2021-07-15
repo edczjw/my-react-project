@@ -1,9 +1,14 @@
-# Dockerfile 是一个用来构建镜像的文本文件,文本内容包含了一条条构建镜像所需的指令和说明.
-FROM nginx:1.15
-COPY dist/  /usr/share/nginx/html/
+# dockerfile
+# build stage
+FROM node:lts-alpine as build-stage
+WORKDIR /app
+COPY package*.json ./
+RUN yarn
+COPY . .
+RUN yarn build:prd
 
-ADD default.conf /etc/nginx/conf.d/
-
-WORKDIR /usr/share/nginx/html
-
-RUN chmod -R a+rx *
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
