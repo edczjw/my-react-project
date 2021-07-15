@@ -68,7 +68,7 @@ http.createServer(async (req, res) => {
    console.log('deploy success')
     res.end('ok')
 }
-}).listen(3000, () => {
+}).listen(3002, () => {
     console.log('server is ready')
-    
+
 })
