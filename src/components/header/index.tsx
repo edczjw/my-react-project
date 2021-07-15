@@ -9,8 +9,8 @@ interface AProps {
 const { Search } = Input;
 const Aheader: React.FC<AProps> = (props) => {
 
-    const onSearch = (value) => {
-        console.log('value', value);
+    const onSearch = () => {
+        // console.log('value', value);
     };
     return (
         <div className={style.AheaderBox}>

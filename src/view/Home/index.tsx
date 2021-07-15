@@ -6,8 +6,7 @@ import Contranier from '@/components/contranier'
 
 const { Header, Footer, Sider, Content } = Layout;
 // 主页
-function Ahome (){
-    console.log('import.meta.env',import.meta.env);
+function Ahome (){ 
     return (
         <div className={style.Ahome_wrapper}>
             
