@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
-    "build:prd": "tsc && vite build --mode production",
+    "build": "tsc && vite build --mode production",
     "serve": "vite preview"
   },
   "dependencies": {
