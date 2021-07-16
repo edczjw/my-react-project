@@ -37,8 +37,8 @@ http.createServer(async (req, res) => {
       const projectDir = path.resolve(`./${data.repository.name}`)
      deleteFolderRecursive(projectDir)
      
-      // 拉取仓库最新代码 git@github.com:edczjw/my-react-project.git
-      execSync(`git clone git@github.com:edczjw/${data.repository.name}.git ${projectDir}`,{
+      // 拉取仓库最新代码 https://github.com/edczjw/my-react-project.git
+      execSync(`git clone git://github.com/edczjw/${data.repository.name}.git ${projectDir}`,{
         stdio:'inherit',
     })
     
