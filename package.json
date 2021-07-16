@@ -1,5 +1,6 @@
 {
   "version": "0.0.0",
+  "license": "ISC",
   "scripts": {
     "dev": "vite --mode development",
     "build": "tsc && vite build --mode production",
