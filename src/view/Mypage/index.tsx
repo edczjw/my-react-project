@@ -8,7 +8,7 @@ const Mypage:React.FC<AProps>=(props)=>{
 
     return(
         <div className={style.AheaderBox}>
-          我的
+          我的1
         </div>
     )
 }
