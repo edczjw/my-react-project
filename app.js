@@ -60,7 +60,7 @@ http.createServer(async (req, res) => {
    })
 
       // 创建 docker 容器
-      execSync(`docker run -d -p 8002:80 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
+      execSync(`docker run -d -p 8002:8002 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
        stdio:'inherit',
    })
 
