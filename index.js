@@ -68,6 +68,6 @@ http.createServer(async (req, res) => {
     res.end('ok')
 }
 }).listen(3002, () => {
-    console.log('server is ready')
+    console.log('server is ready','尽快答复')
 
 })
