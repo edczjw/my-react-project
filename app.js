@@ -38,7 +38,7 @@ http.createServer(async (req, res) => {
      deleteFolderRecursive(projectDir)
      
       // 拉取仓库最新代码 https://github.com/edczjw/my-react-project.git
-      execSync(`git clone https://github.com/edczjw/${data.repository.name}.git ${projectDir}`,{
+      execSync(`git clone git://github.com/edczjw/${data.repository.name}.git ${projectDir}`,{
         stdio:'inherit',
     })
     
@@ -60,7 +60,7 @@ http.createServer(async (req, res) => {
    })
 
       // 创建 docker 容器
-      execSync(`docker run -d -p 8002:8002 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
+      execSync(`docker run -d -p 8002:80 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
        stdio:'inherit',
    })
 
