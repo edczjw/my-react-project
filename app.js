@@ -52,6 +52,7 @@ http.createServer(async (req, res) => {
      fs.copyFileSync(path.resolve(__dirname,`./.dockerignore`), path.resolve(projectDir, './.dockerignore'))
      console.log('复制 .dockerignore 成功！');
 
+     console.log('开始执行 Dockerfile!!');
       // 创建 docker 镜像
      execSync(`docker build . -t ${data.repository.name}-image:latest `,{
        stdio:'inherit',
@@ -59,7 +60,7 @@ http.createServer(async (req, res) => {
    })
    console.log('创建 docker 新镜像成功！');
 
-    // 销毁 docker 容器
+    // 列出 docker 所有容器
     execSync(`docker ps -a -f "name=^${data.repository.name}-container" --format="{{.Names}}" | xargs -r docker stop | xargs -r docker rm`, {
         stdio: 'inherit',
     })
@@ -69,7 +70,7 @@ http.createServer(async (req, res) => {
     execSync(`docker run -d -p 8002:80 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
         stdio:'inherit',
     })
-    console.log('创建 docker 容器成功！');
+    console.log('创建 docker 新容器成功！');
 
     console.log('执行成功！')
     res.end('ok')
