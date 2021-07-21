@@ -11,10 +11,10 @@ COPY yarn.lock .
 
 RUN yarn cache clean
 # 下载依赖包
-RUN npm install
+RUN yarn
 COPY . .
 # 构建打包
-RUN npm run build
+RUN yarn build
 
 # 第二步：生产
 FROM nginx:stable-alpine as production-stage
