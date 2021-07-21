@@ -66,7 +66,7 @@ http.createServer(async (req, res) => {
     })
     console.log('销毁 docker 容器成功！');
 
-    // 创建 docker 容器
+    // 创建 docker 容器  8002是阿里云服务器的端口  80是 docker 容器暴露给外部的端口
     execSync(`docker run -d -p 8002:80 --name ${data.repository.name}-container  ${data.repository.name}-image:latest`, {
         stdio:'inherit',
     })

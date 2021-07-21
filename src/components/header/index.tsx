@@ -14,7 +14,7 @@ const Aheader: React.FC<AProps> = (props) => {
     };
     return (
         <div className={style.AheaderBox}>
-            <div className={style.Aheader_logo}>ALLEN 导航</div>
+            <div className={style.Aheader_logo}>ALL22EN 导航</div>
             <div className={style.Aherder_box}>
                 <div><SmileTwoTone /> 发2现</div>
                 <div><HeartTwoTone twoToneColor="#eb2f96" /> 资源</div>
