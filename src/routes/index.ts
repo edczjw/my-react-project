@@ -19,14 +19,14 @@ const routes = [
         id:'Mypage',
         path: '/Mypage',
         title: '我的',
-        component: Mypage,
+        component: ()=>{import('@/view/Mypage')},
         icon: IdcardOutlined,
         childrens:{}
     },{
         id:'Login',
         path: '/Login',
         title: '登录',
-        component: Login,
+        component: ()=>{import('@/view/Login')},
         icon: FunctionOutlined,
         childrens:{}
     }
