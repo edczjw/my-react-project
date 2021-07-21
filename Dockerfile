@@ -20,6 +20,6 @@ RUN yarn build
 FROM nginx:stable-alpine as production-stage
 
 # 将build-stage产物从app/dist文件夹复制到/usr/local/src/nginx/html 
-COPY --from=build-stage /app/dist /usr/share/nginx/www
+COPY --from=build-stage /app/dist /usr/share/nginx/html/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
