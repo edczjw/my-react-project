@@ -13,7 +13,7 @@ RUN yarn cache clean
 # 下载依赖包
 RUN yarn
 COPY . .
-# 构建
+# 构建打包
 RUN yarn build
 
 # 第二步：生产
