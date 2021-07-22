@@ -16,7 +16,7 @@ COPY . .
 # 构建打包
 RUN yarn build
 
-# 第二步：生产
+# 第二步：生产 这个nginx是容器里面的，并不是阿里云服务器的
 FROM nginx:stable-alpine as production-stage
 
 # 将build-stage产物从app/dist文件夹复制到/usr/local/src/nginx/html 
