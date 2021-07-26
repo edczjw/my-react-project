@@ -2,13 +2,13 @@
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "vite --mode development",
+    "start": "vite --mode development",
     "build": "tsc && vite build --mode production",
     "serve": "vite preview"
   },
   "dependencies": {
     "alias": "^0.0.5",
-    "antd": "^4.16.2",
+    "antd": "4.16.8",
     "autoprefixer": "^10.2.6",
     "babel-eslint": "^10.1.0",
     "dayjs": "^1.8.30",
